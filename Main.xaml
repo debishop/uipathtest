@@ -187,7 +187,10 @@
                   <av:Size x:Key="ShapeSize">200,68.8</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="End Process 1" sap:VirtualizedContainerService.HintSize="345.6,440.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="End Process 1" sap:VirtualizedContainerService.HintSize="345.6,543.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="test" />
+                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,9 +205,6 @@
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="test" />
                 </Sequence>
                 <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="test" />
-                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -219,6 +219,7 @@
                     </Assign.Value>
                   </Assign>
                 </Sequence>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="304,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[test]" />
               </Sequence>
             </FlowStep>
           </FlowDecision.False>
